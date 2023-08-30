@@ -23,6 +23,9 @@
                 "-lopencv_calib3d",
                 //opencv  end
 
+				"/usr/include/gtk-3.0/",
+				"/usr/include/glib-2.0",
+
 				//system setting
                 "-fopenmp",
                 "-lstdc++fs"//for file system
