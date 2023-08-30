@@ -1,0 +1,51 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++-8 build active file",
+			"command": "/usr/bin/g++-8",
+			"args": [
+				"-fdiagnostics-color=always",
+                "-std=c++17",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/${fileBasenameNoExtension}",
+
+				//opencv
+                "-I/home/${env:USERNAME}/lib/opencv-4.7.0/include/opencv4",
+                "-L/home/${env:USERNAME}/lib/opencv-4.7.0/lib",
+                "-lopencv_core",
+                "-lopencv_imgproc",
+                "-lopencv_highgui",
+                "-lopencv_imgcodecs",
+                "-lopencv_calib3d",
+                //opencv  end
+
+				//system setting
+                "-fopenmp",
+                "-lstdc++fs"//for file system
+                // "-lboost_system",
+                // "-lglog"
+                //system setting end
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: /usr/bin/g++-8"
+		},
+
+		{
+            "label": "Execute",
+            // "command": "${workspaceRoot}/Santianna/main",
+            "command": "${fileDirname}/${fileBasenameNoExtension}",
+            //"command": "cd ${fileDirname} && ./${fileBasenameNoExtension}",
+            "group": "test"
+        }
+	]
+}
