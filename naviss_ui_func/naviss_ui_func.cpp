@@ -121,7 +121,7 @@ gboolean main_thread_func(gpointer data)
 
     if (!g_do_first_init)
     {
-        std::string _img_base_path = "/home/hank/glade_ws/ListData";
+        std::string _img_base_path = "/home/dyjeon/developes/naviss-ui-santianna/glade_ws/ListData";
 
         std::string _cam0_path = _img_base_path + "/0/";
         std::string _cam1_path = _img_base_path + "/1/";
@@ -381,7 +381,7 @@ void activate_gui(GtkApplication *app, NAVISSMainWindow nmw, gpointer user_data)
 
     /* Import UI designed via Glade */
     builder = gtk_builder_new();
-    gtk_builder_add_from_file(builder, "/home/hank/glade_ws/NAVISS_MAIN_UI.glade", NULL);
+    gtk_builder_add_from_file(builder, "/home/dyjeon/developes/naviss-ui-santianna/glade_ws/NAVISS_MAIN_UI.glade", NULL);
 
     /* get pointers to the Widgets */
     window = GTK_WIDGET(gtk_builder_get_object(builder, "NAVISS_MAIN"));
@@ -405,13 +405,13 @@ void activate_gui(GtkApplication *app, NAVISSMainWindow nmw, gpointer user_data)
     nmw.top_view = GTK_WIDGET(gtk_builder_get_object(builder, "IMAGE_TOP_VIEW"));
 
     nmw.icon_view0 = GTK_WIDGET(gtk_builder_get_object(builder, "ICON_VIEW0"));
-    gtk_image_set_from_file(GTK_IMAGE(nmw.icon_view0), "/home/hank/glade_ws/resources/view_0.svg");
+    gtk_image_set_from_file(GTK_IMAGE(nmw.icon_view0), "/home/dyjeon/developes/naviss-ui-santianna/glade_ws/resources/view_0.svg");
     nmw.icon_view1 = GTK_WIDGET(gtk_builder_get_object(builder, "ICON_VIEW1"));
-    gtk_image_set_from_file(GTK_IMAGE(nmw.icon_view1), "/home/hank/glade_ws/resources/view_2.svg");
+    gtk_image_set_from_file(GTK_IMAGE(nmw.icon_view1), "/home/dyjeon/developes/naviss-ui-santianna/glade_ws/resources/view_2.svg");
     nmw.icon_view2 = GTK_WIDGET(gtk_builder_get_object(builder, "ICON_VIEW2"));
-    gtk_image_set_from_file(GTK_IMAGE(nmw.icon_view2), "/home/hank/glade_ws/resources/view_5.svg");
+    gtk_image_set_from_file(GTK_IMAGE(nmw.icon_view2), "/home/dyjeon/developes/naviss-ui-santianna/glade_ws/resources/view_5.svg");
     nmw.icon_view3 = GTK_WIDGET(gtk_builder_get_object(builder, "ICON_VIEW3"));
-    gtk_image_set_from_file(GTK_IMAGE(nmw.icon_view3), "/home/hank/glade_ws/resources/view_8.svg");        
+    gtk_image_set_from_file(GTK_IMAGE(nmw.icon_view3), "/home/dyjeon/developes/naviss-ui-santianna/glade_ws/resources/view_8.svg");        
 
     nmw.front_view = GTK_WIDGET(gtk_builder_get_object(builder, "IMAGE_FRONT"));
 
@@ -420,14 +420,14 @@ void activate_gui(GtkApplication *app, NAVISSMainWindow nmw, gpointer user_data)
 
     nmw.full_btn = GTK_WIDGET(gtk_builder_get_object(builder, "BUTTON_FULLVIEW"));
 
-    // nmw.full_btn_img = gtk_image_new_from_file("/home/hank/glade_ws/resources/btn_full.svg");
-    // nmw.org_btn_img = gtk_image_new_from_file("/home/hank/glade_ws/resources/btn_mod.svg");
+    // nmw.full_btn_img = gtk_image_new_from_file("/home/dyjeon/developes/naviss-ui-santianna/glade_ws/resources/btn_full.svg");
+    // nmw.org_btn_img = gtk_image_new_from_file("/home/dyjeon/developes/naviss-ui-santianna/glade_ws/resources/btn_mod.svg");
     // gtk_button_set_image(GTK_BUTTON(nmw.full_btn), nmw.full_btn_img);
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(nmw.full_btn), false);
     // gtk_button_set_relief(GTK_BUTTON(nmw.full_btn), GTK_RELIEF_NONE);
 
     nmw.naviss_logo = GTK_WIDGET(gtk_builder_get_object(builder, "IMAGE_NAVISS_LOGO"));
-    gtk_image_set_from_file(GTK_IMAGE(nmw.naviss_logo), "/home/hank/glade_ws/resources/logo.svg");
+    gtk_image_set_from_file(GTK_IMAGE(nmw.naviss_logo), "/home/dyjeon/developes/naviss-ui-santianna/glade_ws/resources/logo.svg");
 
     nmw.naview_btn = GTK_WIDGET(gtk_builder_get_object(builder, "BUTTON_NAVIEW"));
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(nmw.naview_btn), false);
@@ -585,7 +585,7 @@ void on_history_btn_clicked(GtkWidget *widget, gpointer data)
     GtkWidget *history_modal;
     GtkBuilder *history_builder;
 
-    history_builder = gtk_builder_new_from_file("/home/hank/glade_ws/NAVISS_MAIN_UI.glade");
+    history_builder = gtk_builder_new_from_file("/home/dyjeon/developes/naviss-ui-santianna/glade_ws/NAVISS_MAIN_UI.glade");
     history_modal = GTK_WIDGET(gtk_builder_get_object(history_builder, "NAVISS_HISTORY"));
 
     gtk_widget_show_all(history_modal);
@@ -606,7 +606,7 @@ void on_option_btn_clicked(GtkWidget *widget, gpointer data)
     GtkWidget *option_modal;
     GtkBuilder *option_builder;
 
-    option_builder = gtk_builder_new_from_file("/home/hank/glade_ws/NAVISS_MAIN_UI.glade");
+    option_builder = gtk_builder_new_from_file("/home/dyjeon/developes/naviss-ui-santianna/glade_ws/NAVISS_MAIN_UI.glade");
     option_modal = GTK_WIDGET(gtk_builder_get_object(option_builder, "NAVISS_OPTION"));
 
     // gtk_window_set_modal(GTK_WINDOW(GTK_DIALOG(option_modal)), TRUE);
