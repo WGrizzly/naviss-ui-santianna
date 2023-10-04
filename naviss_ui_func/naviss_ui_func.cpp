@@ -1,15 +1,23 @@
+#include "sx_around_view.hpp"
+#include "sx_kass.hpp"
+#include "../Deck/utils/utils.hpp"
+
+#include <memory>
 #include <iostream>
 #include <string>
 #include <thread>
 #include <opencv2/opencv.hpp>
+#include <filesystem>
+#include <algorithm>
 #include <glog/logging.h>
 
 #include <gtk-3.0/gtk/gtk.h>
 #include <glib.h>
 #include <gdk/gdk.h>
-#include <epoxy/gl.h>
-#include <GL/gl.h>
+// #include <epoxy/gl.h>
+// #include <GL/gl.h>
 // #include <gtkmm-3.0/gtkmm.h>
+
 
 #define IGNORE_VAR(type, identifier) \
 { \
